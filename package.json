@@ -7,7 +7,7 @@
     "build": "ng build && npm run create-redirects",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "create-redirects": "echo '/*    /index.html   200' > dist/verduleate/browser/_redirects"
+    "create-redirects": "echo '/*    /index.html   200' > dist/camellaec/browser/_redirects"
   },
   "private": true,
   "dependencies": {
