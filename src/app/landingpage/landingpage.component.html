@@ -14,11 +14,12 @@
                 <div class="nav__options">
 
                     <div class="btn display-none">
-                        <a (click)="goToTrabajadores()" class="nav__option" style="border-color: #79c226; background-color: #79c226; color: white;">
+                        <a (click)="goToTrabajadores()" class="nav__option"
+                            style="border-color: #79c226; background-color: #79c226; color: white;">
                             <b>Trabaja ya</b>
                         </a>
 
-                        <a (click)="goToUsuarios()"  class="nav__option" >
+                        <a (click)="goToUsuarios()" class="nav__option">
                             <b>Contrata ya</b>
                         </a>
                     </div>
@@ -56,14 +57,14 @@
                 </div> -->
                 <h2 class="h2">
                     Tú siéntate y espera que el trabajo llegue a las puertas de tu casa
-                    
+
 
                 </h2>
 
                 <div class="content-button">
-                    <a href="https://9000-idx-project-logos-1728309880809.cluster-uf6urqn4lned4spwk4xorq6bpo.cloudworkstations.dev/sign-upl"  class="button" style="background-color: #79c226;">Trabaja ya</a>
-                    <a href="../public/index2.html"  class="button" style="margin-left: 15px;">Contrata ya</a>
-                    
+                    <a (click)="goToTrabajadores()" class="button" style="background-color: #79c226;">Trabaja ya</a>
+                    <a href="../public/index2.html" class="button" style="margin-left: 15px;">Contrata ya</a>
+
                 </div>
             </div>
             <div class="content-image">
@@ -72,13 +73,14 @@
                 </div>
             </div>
 
-        </div>    </section>
+        </div>
+    </section>
 
     <section id="servicios" class="services">
         <div class="content-sections wrapper grid reveal">
             <div class="container-section">
-                <div class="description-section" >
-                    <h1 class="h1" style="color: black;">Tu mejor opción para trabajar    
+                <div class="description-section">
+                    <h1 class="h1" style="color: black;">Tu mejor opción para trabajar
                     </h1>
                     <p style="color: black;">Rápido, confiable y fácil de usar .</p>
                 </div>
@@ -91,14 +93,15 @@
                             </div>
                             <div class="title-card">
                                 <h1 class="h1">
-                                    
+
                                     Búsqueda rápida y confiable de empleos
                                 </h1>
                             </div>
                         </div>
                         <div class="contains-card">
                             <p>
-                                Facilitamos tu búsqueda de empleo, conectándote con oportunidades laborales que se alinean con tu experiencia, asegurando eficiencia y fiabilidad en cada postulación.
+                                Facilitamos tu búsqueda de empleo, conectándote con oportunidades laborales que se
+                                alinean con tu experiencia, asegurando eficiencia y fiabilidad en cada postulación.
                             </p>
                         </div>
                     </div>
@@ -115,7 +118,8 @@
                         </div>
                         <div class="contains-card">
                             <p>
-                                Ofrecemos a nuestros usuarios un acceso inmediato a las ofertas de trabajo disponibles, permitiéndoles aprovechar todas las oportunidades relevantes al instante.
+                                Ofrecemos a nuestros usuarios un acceso inmediato a las ofertas de trabajo disponibles,
+                                permitiéndoles aprovechar todas las oportunidades relevantes al instante.
                             </p>
                         </div>
                     </div>
@@ -132,7 +136,8 @@
                         </div>
                         <div class="contains-card">
                             <p>
-                                Los usuarios pueden evaluar en línea el proceso de selección y la calidad de las oportunidades laborales, además de dejar comentarios y sugerencias sobre su experiencia.
+                                Los usuarios pueden evaluar en línea el proceso de selección y la calidad de las
+                                oportunidades laborales, además de dejar comentarios y sugerencias sobre su experiencia.
                             </p>
                         </div>
                     </div>
@@ -154,24 +159,25 @@
             <div class="description-section">
                 <h1 class="h1" style="color: black;">
                     <i class="fa fa-search" style="font-size:30px"></i> <!-- Icono -->
-                    Búsquedas rápidas y sencillas 
+                    Búsquedas rápidas y sencillas
                 </h1>
-               <!--  <div class="divider">
+                <!--  <div class="divider">
                     <div class="vertical-line"></div>
                 </div> -->
                 <h2 class="h2" style="color: black;">
-                    Siempre estamos atentos a las distintas ofertas para garantizarte el mejor trabajo posible. Atención al cliente siempre disponible para ayudarte.
+                    Siempre estamos atentos a las distintas ofertas para garantizarte el mejor trabajo posible. Atención
+                    al cliente siempre disponible para ayudarte.
                 </h2>
 
                 <div class="content-button" style="justify-content: center;">
-                    <a href="https://9000-idx-project-logos-1728309880809.cluster-uf6urqn4lned4spwk4xorq6bpo.cloudworkstations.dev/sign-up"  class="button" >Busca ya</a>
+                    <a (click)="goToUsuarios()" class="button">Busca ya</a>
                 </div>
-              
-               <!--  <div class="content-button">
+
+                <!--  <div class="content-button">
                     <a href="" class="button">Comienza tu prueba de 14 días</a>
                 </div> -->
             </div>
-           
+
         </div>
     </section>
 
@@ -187,12 +193,12 @@
                             ¿Buscas trabajos?
                         </h1>
                         <h2 class="h2">
-                            Nuestro objetivo es ofrecerte la mejor experiencia en la gestión de faltas de empleo. 
+                            Nuestro objetivo es ofrecerte la mejor experiencia en la gestión de faltas de empleo.
                             Comunícate con nosotros y permítenos impresionarte con un servicio excepcional.
                         </h2>
 
                         <div class="phrases-content-button">
-                            <a href="https://9000-idx-project-logos-1728309880809.cluster-uf6urqn4lned4spwk4xorq6bpo.cloudworkstations.dev/sign-up" class="button" style="background-color: #79c226;">Regístrate</a>
+                            <a (click)="goToUsuarios()" class="button" style="background-color: #79c226;">Regístrate</a>
                         </div>
                     </div>
                 </div>
@@ -204,11 +210,11 @@
 
     <div class="container-btn-movil">
         <div class="btn">
-            <a href="https://9000-idx-project-logos-1728309880809.cluster-uf6urqn4lned4spwk4xorq6bpo.cloudworkstations.dev/sign-up"  class="nav__option">
+            <a (click)="goToTrabajadores()" class="nav__option">
                 Trabaja ya
             </a>
 
-            <a href="https://9000-idx-project-logos-1728309880809.cluster-uf6urqn4lned4spwk4xorq6bpo.cloudworkstations.dev/sign-up"  class="nav__option">
+            <a (click)="goToUsuarios()" class="nav__option">
                 Contrata ya
             </a>
         </div>
@@ -233,7 +239,7 @@
                         </div>
                     </div>
 
-<!--                     <div class="container-producer">
+                    <!--                     <div class="container-producer">
                         <div class="producer">
                             <p style="font-weight: 600; font-size: 1.1rem; margin-block-start: 0em;">Dirección:</p>
                             <p
@@ -267,7 +273,7 @@
                             </li>
                         </ul>
 
-<!--                         <div class="contains-social-media">
+                        <!--                         <div class="contains-social-media">
                             <p class="font-weight">Redes sociales</p>
                             <ul>
                                 <li>
