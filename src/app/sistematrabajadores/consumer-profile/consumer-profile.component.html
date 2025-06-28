@@ -1,0 +1,101 @@
+<section class="section">
+    <div class="about">
+        <div class="left">
+            <div class="info">
+                <h2 id="name">{{data.fullname}}</h2>
+                <h4 id="aboutme">Soy un contratista independiente en busca de personas responsables y trabajadoras para colaborar en proyectos variados. Valoro el compromiso y la dedicación, y siempre busco crear relaciones laborales basadas en la confianza y el respeto. ¡Espero trabajar contigo pronto!</h4>
+                <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false" />
+                <div class="buttons">
+                    <div>
+                        <button class="email" (click)="copy(data.email)">
+                          Copiar email <i class='bx bx-copy-alt'></i>
+                        </button>
+                        <p-toast></p-toast> 
+                      </div>
+                    <button class="email" (click)="copy(data.cellphone)">
+                        Copiar celular <i class='bx bxs-phone'></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <a class="online" href="#"><i class='bx bxs-circle' style='color:#ffc01d'></i>Contratando</a>
+            <p-image id="fotoPerfil" class="w-full md:w-[30rem] rounded shadow-lg" aria-haspopup="true"
+                src="" />
+        </div>
+    </div>
+
+    <div class="works">
+        <div class="left">
+            <h3>Trabajos Publicados</h3>
+            <div class="works-list">
+                <div class="item" *ngFor="let job of jobs">
+                    <div class="work-info">
+                        <h5 class="active">{{job.title}}</h5>
+                        <p><i class='bx bx-calendar' ></i>{{job.createAd}}</p>
+                    </div>
+                    <p>Presencial</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="card">
+                <p-panel [toggleable]="true">
+                    <ng-template pTemplate="header">
+                        <div class="flex items-center gap-2">
+                            <p-avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png"
+                                shape="circle" />
+                            <span class="font-bold">Amy Elsner</span>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <div class="flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex items-center gap-2">
+                                <p-button icon="pi pi-user" rounded text></p-button>
+                                <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false" />
+                            </div>
+                        </div>
+                    </ng-template>
+                    <p class="m-0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </p-panel>
+                <p-panel [toggleable]="true">
+                    <ng-template pTemplate="header">
+                        <div class="flex items-center gap-2">
+                            <p-avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png"
+                                shape="circle" />
+                            <span class="font-bold">Amy Elsner</span>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <div class="flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex items-center gap-2">
+                                <p-button icon="pi pi-user" rounded text></p-button>
+                                <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false" />
+                            </div>
+                        </div>
+                    </ng-template>
+                    <p class="m-0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </p-panel>
+            
+            </div>
+        </div>
+
+    </div>
+</section>

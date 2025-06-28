@@ -1,0 +1,30 @@
+.container {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    
+}
+.thank-you {
+    font: oblique bold 120% cursive;    
+    font-size: 48px;
+    color: #1d2936;
+    margin-bottom: 20px;
+    padding-top: 200px;
+}
+.message {
+    font-size: 18px;
+    color: #9b9b9b;
+    margin-bottom: 40px;
+}
+.button {
+    background-color: #101720;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.button:hover {
+    background-color: #0d0d0e;
+}

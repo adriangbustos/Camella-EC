@@ -1,0 +1,36 @@
+<body>
+
+    <div class="container">
+        <marquee [scrollAmount]="10">🚀 Cada vez más cerca de tu mejor versión 🚀</marquee>
+        <div class="main">
+            <div class="content">
+                <div id="textito">
+                    <h1 id="felicidades">Felicidades</h1>
+                    <h6 id="next-message">Su postulación se ha registrado con éxito, por favor espere a que verifiquemos
+                        y activemos su cuenta.</h6>
+                </div>
+
+                <div class="terminal-loader">
+                    <div class="terminal-header">
+                        <div class="terminal-title">Status</div>
+                        <div class="terminal-controls">
+                            <div class="control close"></div>
+                            <div class="control minimize"></div>
+                            <div class="control maximize"></div>
+                        </div>
+                    </div>
+                    <div class="text">Revisando...</div>
+                </div>
+                <button class="button2" (click)="lanzarConfetti()">
+                    ¡Celebrar!
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</body>

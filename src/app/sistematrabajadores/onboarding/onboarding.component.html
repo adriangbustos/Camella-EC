@@ -1,0 +1,216 @@
+<div id="onboarding-container">
+  <div id="onboarding">
+    <form [formGroup]="onboardingForm">
+      <div style="line-height: 2;" *ngIf="currentStep === 1">
+        <p-image
+          src="https://firebasestorage.googleapis.com/v0/b/project-logos-e0075.appspot.com/o/logo2.svg?alt=media&token=f2bf3b48-baa7-4461-a544-d9307db860d8"
+          alt="Image" width="250" />
+        <h2>¡Bienvenido a CAMELLA EC!</h2>
+        <p>¡Nos alegra que te unas a la comunidad líder en Latinoamérica para generar ingresos extra! Conéctate con
+          oportunidades en limpieza, reparaciones, tutorías, transporte... ¡y mucho más!</p>
+        <p>Completa tus datos iniciales para empezar a construir tu perfil:</p>
+        <ul style="list-style-type: none; padding: 0;">
+          <li>🔹 <strong>Gestiona tu tiempo con flexibilidad</strong></li>
+          <li>🔹 <strong>Ofrece tus habilidades online o presenciales</strong></li>
+        </ul>
+        <p>¡Comienza a generar ingresos adicionales hoy! 💪</p>
+        <button pButton pRipple label="¡Empecemos!" icon="pi pi-arrow-right" iconPos="right"
+          class="w-full custom-button" (click)="nextStep()"></button>
+      </div>
+
+
+
+      <div *ngIf="currentStep === 2" class="step">
+        <div class="card">
+          <p-progressBar [value]="25" />
+        </div>
+        <h2>Paso 1: Completa tus datos personales</h2>
+        <p>🚀 ¡Estás avanzando, vamos bien! 🚀</p>
+        <p>Para asegurarnos de que tu perfil esté listo, necesitamos algunos detalles importantes:</p>
+
+        <p> 💡 Cuanto más completos estén tus datos, más rápido podrás empezar a recibir solicitudes y ofertas de
+          trabajo.
+          ¡No te preocupes, estamos casi listos!</p>
+        <input id="fullname" formControlName="fullname" type="text" placeholder="Ingresa tu nombre completo" pInputText
+          class="w-full mb-3">
+
+        <input id="dni" formControlName="dni" type="text" placeholder="Ingresa cédula de identidad" pInputText
+          class="w-full mb-3">
+
+        <p-calendar styleClass="w-full mb-3" formControlName="birthday" placeholder="Ingresa tu fecha de nacimiento" />
+
+        <button [disabled]="!isStepValid(currentStep)" pButton pRipple label="Siguiente paso" icon="pi pi-arrow-right"
+          iconPos="right" class="w-full custom-button" (click)="nextStep()"></button>
+
+        <p-divider />
+
+        <button pButton pRipple label="Paso anterior" icon="pi pi-arrow-left" iconPos="left"
+          class="w-full custom-button" (click)="previousStep()"></button>
+
+      </div>
+
+
+
+      <div *ngIf="currentStep === 3" class="step">
+        <div class="card">
+          <p-progressBar [value]="50" />
+        </div>
+        <h2>Paso 2: Sube tu cédula y record policial</h2>
+
+
+
+        <div class="card">
+          <p-scrollPanel [style]="{ width: '100%', height: '400px' }" styleClass="custombar1">
+
+            <a style="text-decoration: none; align-items: center; justify-content: center; display: flex;"
+              href="https://certificados.ministeriodelinterior.gob.ec/gestorcertificados/antecedentes/" target="_blank"
+              rel="noopener noreferrer" class="p-button font-bold">
+              Clic aquí para obtener su record policial
+            </a>
+
+            <p>Suba una imagen de su cédula y usted como la que ve en pantalla:</p>
+            <div id="centrar">
+              <p-image src="https://www.casarosada.gob.ar/images/201710/foto-portada-dni-nueva_1.jpg" alt="Image"
+                width="200" [preview]="false" />
+            </div>
+
+            <ul style="list-style-type: none; padding: 0;">
+
+              <div class="card-main">
+                <p-toast />
+                <p-fileUpload name="myfile[]" url="https://www.primefaces.org/cdn/api/upload.php" [multiple]="true"
+                  accept="image/*" maxFileSize="1000000" (onUpload)="onTemplatedUpload()"
+                  (onSelect)="onSelectedFiles($event)">
+                  <ng-template pTemplate="header" let-files let-chooseCallback="chooseCallback"
+                    let-clearCallback="clearCallback" let-uploadCallback="uploadCallback">
+                    <div class="flex flex-wrap justify-content-between align-items-center flex-1 gap-2">
+                      <div class="flex gap-2">
+                        <p-button (onClick)="choose($event, chooseCallback)" icon="pi pi-images" [rounded]="true"
+                          [outlined]="true" />
+                        <p-button (onClick)="clearCallback()" icon="pi pi-times" [rounded]="true" [outlined]="true"
+                          severity="danger" [disabled]="!files || files.length === 0" />
+
+                      </div>
+                    </div>
+
+
+                  </ng-template>
+
+                  <ng-template pTemplate="content" let-files let-uploadedFiles="uploadedFiles"
+                    let-removeFileCallback="removeFileCallback"
+                    let-removeUploadedFileCallback="removeUploadedFileCallback">
+                    <div *ngIf="files?.length > 0">
+                    </div>
+                    <div *ngIf="uploadedFiles?.length > 0">
+                      <h5>Completed</h5>
+                      <div class="flex flex-wrap p-0 sm:p-5 gap-5">
+                        <div *ngFor="let file of uploadedFiles; let i = index"
+                          class="card m-0 px-6 flex flex-column border-1 surface-border align-items-center gap-3">
+                          <div>
+                            <img role="presentation" [alt]="file.name" [src]="file.objectURL" width="100" height="50" />
+                          </div>
+                          <span class="font-semibold">{{ file.name }}</span>
+                          <div>{{ formatSize(file.size) }}</div>
+                          <p-badge value="Completed" class="mt-3" severity="success" />
+                          <p-button icon="pi pi-times" (onClick)="removeUploadedFileCallback(index)" [outlined]="true"
+                            [rounded]="true" severity="danger" />
+                        </div>
+                      </div>
+                    </div>
+                  </ng-template>
+                  <ng-template pTemplate="empty">
+                    <div class="flex align-items-center justify-content-center flex-column">
+                      <i class="pi pi-cloud-upload border-2 border-circle p-5 text-8xl text-400 border-400"></i>
+                      <p class="mt-4 mb-0">Arrastre y suelte</p>
+                    </div>
+                  </ng-template>
+                </p-fileUpload>
+              </div>
+            </ul>
+          </p-scrollPanel>
+        </div>
+
+
+        <button [disabled]="!isStepValid(currentStep)" pButton pRipple label="Siguiente paso" icon="pi pi-arrow-right"
+          iconPos="right" class="w-full" class="w-full custom-button" (click)="nextStep()"></button>
+
+        <p-divider />
+
+        <button pButton pRipple label="Paso anterior" icon="pi pi-arrow-left" iconPos="left"
+          class="w-full custom-button" (click)="previousStep()"></button>
+      </div>
+
+
+
+      <div *ngIf="currentStep === 4" class="step">
+        <div class="card">
+          <p-progressBar [value]="75" />
+        </div>
+        <h2>Paso 3: Define tu profesión y cuéntanos sobre ti</h2>
+        <p>🚀 ¡Estás un paso más cerca de destacar en CAMELLA EC! 🚀</p>
+        <p>Para conectar con las mejores oportunidades, necesitamos saber un poco más sobre tus habilidades:</p>
+        <div class="w-full mb-3">
+          <p-dropdown formControlName="selectedProfessions" [options]="professions" [(ngModel)]="selectedProfessions"
+            optionLabel="name" [filter]="true" filterBy="name" [showClear]="true" placeholder="Selecciona tu profesión"
+            styleClass="w-full mb-3 no-hover">
+          </p-dropdown>
+        </div>
+
+
+        <textarea rows="5" cols="30" pInputTextarea formControlName="valueTextArea"
+          placeholder="Escribe una breve descripción" class="w-full mb-3">
+</textarea>
+
+        <button [disabled]="!isStepValid(currentStep)" pButton pRipple label="Siguiente paso" icon="pi pi-arrow-right"
+          iconPos="right" class="w-full custom-button" (click)="nextStep()"></button>
+
+        <p-divider />
+
+        <button pButton pRipple label="Paso anterior" icon="pi pi-arrow-left" iconPos="left"
+          class="w-full custom-button" (click)="previousStep()"></button>
+      </div>
+
+      <div *ngIf="currentStep === 5" class="step">
+        <div class="card">
+          <p-progressBar [value]="100" />
+        </div>
+        <h2 id="pasocuatro">Paso 4: Completa tu información de contacto</h2>
+        <p-scrollPanel [style]="{ width: '100%', height: '350px' }" styleClass="custombar2">
+        <p>📞 ¡Último paso! Estás a punto de activar tu perfil en CAMELLA EC y empezar a recibir oportunidades. Solo
+          necesitamos un par de detalles más:</p>
+        <p> 💡 Consejo: Mantén tu información actualizada para no perderte de ninguna oportunidad.</p>
+        <input id="fullname" formControlName="cellphone" type="text" placeholder="Ingresa tu número de celular"
+          pInputText class="w-full mb-3">
+
+        <input id="dni" formControlName="address" type="text" placeholder="Agrega tu dirección" pInputText
+          class="w-full mb-3">
+
+        <!-- Contenedor del mapa -->
+        
+        <div id="map"></div>
+      </p-scrollPanel>
+        <div class="boton-crear-cuenta" (click)="submit()">
+          <button [disabled]="!isStepValid(currentStep)" pButton pRipple label="Crear perfil" icon="pi pi-check"
+            iconPos="right" class="w-full custom-button"></button>
+        </div>
+        <p-divider />
+
+        <button pButton pRipple label="Paso anterior" icon="pi pi-arrow-left" iconPos="left"
+          class="w-full custom-button" (click)="previousStep()"></button>
+      </div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- Popup de carga -->
+<div *ngIf="isLoading" class="popup">
+  <div class="loading-container">
+    <div class="spinner"></div>
+    <p>Completando perfil...</p>
+  </div>
+
+</div>

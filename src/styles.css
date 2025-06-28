@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Importar el tema lara-dark-blue */
+/* NO TOCAR */
+
+*{
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    background-color: #e3e3e3;
+}
+
+/* Estilo para cambiar el color del foco de los inputs en PrimeNG */
+:focus {
+    outline: none;
+    /* Elimina el contorno predeterminado */
+}
+
+.p-inputtext:focus,
+.p-inputnumber-input:focus,
+.ui-inputtext:focus {
+    border-color: black !important;
+    /* Cambia el color del borde al obtener el foco */
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+    /* Agrega un sombreado negro al borde */
+}
+
+
+/* Estilo para cambiar el borde de los inputs en PrimeNG cuando se pasa el cursor */
+.p-inputtext:hover,
+.p-inputnumber-input:hover,
+.ui-inputtext:hover {
+    border-color: black !important;
+    /* Cambia el color del borde al hacer hover */
+    transition: border-color 0.2s ease-in-out;
+    /* Añade una transición suave */
+}
+
+
+.active {
+    font-weight: bold;
+    color: blue;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: white;
+}
+::-webkit-scrollbar-thumb{
+    background: #40c8c7;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+
+/* Quitar el efecto focus en el input del dropdown */
+.p-dropdown .p-inputtext:focus {
+    background-color: transparent; /* Mantener el fondo original */
+    border-color: inherit; /* Mantener el borde original */
+    outline: none; /* Quitar el borde de focus */
+    box-shadow: none; /* Quitar la sombra de focus */
+    color: inherit; /* Mantener el color del texto original */
+  }
+  
+  /* Si deseas quitar el efecto focus también en la parte del trigger */
+  .p-dropdown .p-dropdown-trigger:focus {
+    background-color: transparent; /* Mantener el fondo del botón */
+    border-color: inherit; /* Mantener el borde original */
+  }
+
+  .p-dropdown:not(.p-disabled).p-focus {
+    border-color: black !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25)
+  }
+	
+  

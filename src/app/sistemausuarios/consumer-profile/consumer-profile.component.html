@@ -1,0 +1,123 @@
+<section class="section">
+    <div class="about">
+        <div class="left">
+            <div class="info">
+                <h2 id="name">Soy nombre</h2>
+                <h4 id="aboutme">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fugiat error non id sit
+                    facilis porro
+                    qui tempora iure? Accusantium reiciendis possimus doloremque ab ipsa impedit in commodi libero
+                    deserunt delectus repellat excepturi aliquid aut modi a repellendus voluptatum, aliquam deleniti.
+                    Dolorum aliquid aliquam alias illo hic nobis, quaerat harum.</h4>
+                <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false" />
+                <div class="buttons">
+                    <button class="email">
+                        Copiar email <i class='bx bx-copy-alt'></i>
+                    </button>
+                    <button class="email">
+                        Copiar celular <i class='bx bxs-phone'></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <a class="online" href="#"><i class='bx bxs-circle' style='color:#ffc01d'></i>Contratando</a>
+            <p-image id="fotoPerfil" class="w-full md:w-[30rem] rounded shadow-lg" aria-haspopup="true"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAMFBMVEX////U1NTV1dXY2Nj8/Pz5+fna2tru7u7g4ODd3d3x8fHq6ur09PTn5+ff39/j4+OfEAzoAAAFD0lEQVR4nO2d25qrKhCEFQHP+v5vu2JMZo9JzKDSVeju/ya3qQ/6jJBliqIoiqIoiqIoiqIoiqIoihINa11Xtv1Y1d77YuL2W1djXzads+x/dxDrmnasfWHyz5jCV33ZnVSm7drKryh7FVr3pWP/3424sirC1P2o9H1zGpW2HDbKe1CM5Rk2bDfuUvekatIWaZthzasE4/uEd2sT6Fr+wIwdW8lnuiGKvjtDw1bzju0P788FVWrrWEaVN2tMyR7tMQe6QtEn41e7OB7mnToRc2zjWuBvTBLL2Ivpmxjo1mhrUYE3yDvViQvMTXtxgTd6nkAr5URfJdL8jUgY/CiRJLBFCWRJ7OTi4DslQ2HEWuJvDCETF0i2v1HAQ798qH+hQisEupkHaG+zr592COw+BVvhHeg+daBsZgkyZDCWMM89LnuzBCucwJUZnCUELiKqpngHZYkNS2BegxaxoikEpafQouIFTEyEFb4fMIhtaolLiGm98fzMxAhQyPMzE4CQ6Ej5zBN5b8rKZ57IZ27cTQqIF6yk+wdxQ+R60htGutSXHaaFIB0RoV3SjwjXF3QzFO+5ObY+8aymY+vL8+HyCv31FcoGxATsUFhhAr60EE5q2GmpvEJ2aSGvkL9NpRUSBodohfDh7yvyfQy2JdbSAjNLVijfFGYrlO8nsnepeCuqY4cL6Qkb3ZVKN0wtvYshPZvhN6KEy0O+QGFXynajE6KOpqRODmdEG8IprKDoWQXm+P4/BOM9PdLPyG1S9mD0gVys4KcyM2KbNBWBcqe9E4j0d8SmMvTezBOpJWySiBO5XMbGbyA+EDu3xzzHtkDKCtPIZXJBR8qfVDyQqiqSsUK5PintUPcSwePBiUR7wcqX833MK6LnExKY3Ut/fih28UUwRvqol2MHfcDnQC74+jUJQN/l2ZIVGQfYN2ukZhvwI2fO6dkC+KE6ZQ3F3ehvKB4VedUAIwc30OsiCAkqdIsyrLCACiS0o7ArSCgT0Zd9wN2MR1/Ygj6i4OHXtYDtEJnJPMH6Usq1Sa7H2aLwRxXrGmEOlXWXIGzSbUgCBe/xfAF+KdSMw3lT0m2QwDkpxZP+HxQCm98khZntStCZDOKVpaB1ZAX8CUyhXxAVgibCvCugUTGR5WpwEQNxDc1HYOfbgNfrLcGdPGG9/oCrgln3lOMSN1ZExLW9xS9pWeH6yTdwgsgqgnG9KPEPmlcAHuMjNaOAp4dYaQ1uDsxKa4CfWLKyb/fNFM30BmeszI6WfWefWhnG19PTotPLotZ1cZ4oY7WFs/sTnOP92dTbgg1j35ads0ujcVGSH+4zQdZN2FVvECNH523TICIkePg3LTYRw+nyehlBRLg0i5SbBnPc27BKqFAipOmJb9MI/pTZ+w7h+AsDqW/TCAUz9eG8EA63V1GPIezm8CImv00P9wSIg8RADvYEcN8h7OeQJdKmF1s4cuAPfzxxDwemVel7mZnd7pRx/nIXexfxNAL3ZqcnErgvO61PYoMzO/oZ5/CiP2xfxPEMcfA3Wxcx+YLijW0vRBWpF/af2NKxGc5lgg82HFLhvTJ+jNCZXH2iKLgkrIgy7UkXcCKkAT6e0gKf/Jl/m+q0G3Tmr6jvuZO0GHyL+mY8+frdWW/xF/0V9GVrUb8YmxP7zyXvwzbjLyRvYlnr+7HsLiUvm7puxhSFr4exvZ64Gdd9PdugKIqiKIqiKIqiKIqiKIqiKIpyYf4BU/9Ub4gpMo0AAAAASUVORK5CYII=" />
+        </div>
+    </div>
+
+    <div class="works">
+        <div class="left">
+            <h3>Trabajos Realizados</h3>
+            <div class="works-list">
+                <div class="item">
+                    <div class="work-info">
+                        <h5 class="active">Título</h5>
+                        <p><i class='bx bx-calendar' ></i> Fecha</p>
+                    </div>
+                    <p>Presencial</p>
+                </div>
+                <div class="item">
+                    <div class="work-info">
+                        <h5 class="active">Título</h5>
+                        <p><i class='bx bx-calendar' ></i> Fecha</p>
+                    </div>
+                    <p>Virtual</p>
+                </div>
+                <div class="item">
+                    <div class="work-info">
+                        <h5 class="active">Título</h5>
+                        <p><i class='bx bx-calendar' ></i> Fecha</p>
+                    </div>
+                    <p>Virtual</p>
+                </div>
+                <div class="item">
+                    <div class="work-info">
+                        <h5 class="active">Título</h5>
+                        <p><i class='bx bx-calendar' ></i> Fecha</p>
+                    </div>
+                    <p>Presencial</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="card">
+                <p-panel [toggleable]="true">
+                    <ng-template pTemplate="header">
+                        <div class="flex items-center gap-2">
+                            <p-avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png"
+                                shape="circle" />
+                            <span class="font-bold">Amy Elsner</span>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <div class="flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex items-center gap-2">
+                                <p-button icon="pi pi-user" rounded text></p-button>
+                                <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false" />
+                            </div>
+                        </div>
+                    </ng-template>
+                    <p class="m-0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </p-panel>
+                <p-panel [toggleable]="true">
+                    <ng-template pTemplate="header">
+                        <div class="flex items-center gap-2">
+                            <p-avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png"
+                                shape="circle" />
+                            <span class="font-bold">Amy Elsner</span>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <div class="flex flex-wrap items-center justify-between gap-4">
+                            <div class="flex items-center gap-2">
+                                <p-button icon="pi pi-user" rounded text></p-button>
+                                <p-rating [(ngModel)]="value" [readonly]="true" [cancel]="false" />
+                            </div>
+                        </div>
+                    </ng-template>
+                    <p class="m-0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis
+                        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </p-panel>
+            
+            </div>
+        </div>
+
+    </div>
+</section>

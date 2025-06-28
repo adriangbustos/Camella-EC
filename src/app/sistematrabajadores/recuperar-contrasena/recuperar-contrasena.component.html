@@ -1,0 +1,41 @@
+
+<div class="container-login">
+    <div id="container-right">
+      <div class="surface-card p-4 shadow-2 border-round">
+        <div class="text-center mb-5">
+          <p-image
+          src="https://firebasestorage.googleapis.com/v0/b/project-logos-e0075.appspot.com/o/logo2.svg?alt=media&token=f2bf3b48-baa7-4461-a544-d9307db860d8"
+          alt="Image" width="350" />
+          <h1 style="font-size: 25px;">Recupera tu contraseña</h1>
+        </div>
+  
+        <div>
+          <label for="email1" class="block text-900 font-medium mb-2">Correo electrónico</label>
+          <input
+            id="email1"
+            type="text"
+            placeholder="Correo Electrónico"
+            pInputText
+            class="w-full mb-3"
+            [(ngModel)]="email"
+          />
+  
+          <button
+            pButton
+            pRipple
+            label="Recuperar contraseña"
+            icon="pi pi-user"
+            class="w-full custom-button"
+            (click)="showDialog()"
+          ></button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mensaje de alerta con espacio reservado -->
+    <div class="message-container">
+      <p-messages [(value)]="messages" [closable]="false" [showTransitionOptions]="'500ms'" 
+      ></p-messages>
+    </div>
+  </div>
+  

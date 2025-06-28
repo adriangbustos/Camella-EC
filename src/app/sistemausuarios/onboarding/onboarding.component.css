@@ -1,0 +1,148 @@
+:host ::ng-deep .p-fileupload .p-fileupload-buttonbar{
+  padding: 0.5rem;
+}
+
+
+#onboarding-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/assets/images/fondito.jpg');
+  background-size: cover;
+}
+
+#onboarding {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.full-width {
+  width: 100%;
+}
+
+.onboarding:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+#onboarding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#onboarding p, ul{
+  text-align: justify ;
+}
+
+h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+#pasocuatro{
+  margin-bottom: 5px;
+}
+
+.step {
+  width: 100%;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards ease-in-out;
+}
+
+.step {
+  text-align: left;
+  width: 100%;
+}
+
+	
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+  z-index: 1000;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid white;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.p-fileupload .p-fileupload-buttonbar {
+  background: #f9fafb;
+  padding: 0.4rem;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  border-bottom: 0 none;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+#centrar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-button:hover {
+  background-color: #FFC01D;
+  color: #1D58A3;
+}
+
+.boton-crear-cuenta{
+  margin-top: 20px;
+}
+
+#map {
+  height: 300px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}

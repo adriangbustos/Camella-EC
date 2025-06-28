@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container .main {
+    display: flex;
+}
+
+.container .main .content {
+    flex: 9;
+}
+
+.container .main .content .header {
+    margin-top: 20px;
+}
+
+.container .main .content .header h4 span {
+    font-size: 13px;
+    color: #a4a8ac;
+    font-weight: 500;
+}
+
+.container .main .content .header p {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.container .main .content .job-cards {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.container .main .content .job-cards .card {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 12px;
+    border: 2px solid #F2F2F2;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.card {
+    background-color: white;
+}
+
+.container .main .content .job-cards .card:hover {
+    box-shadow: none;
+}
+
+.container .main .content .job-cards .card .card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .main .content .job-cards .card .card-header>i {
+    font-size: 24px;
+    color: #a4a8ac;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .main .content .job-cards .card .card-header>i:hover {
+    color: #111;
+}
+
+.container .main .content .job-cards .card .card-header .job-info {
+    display: flex;
+    gap: 10px;
+}
+
+.container .main .content .job-cards .card .card-header .job-info i {
+    font-size: 34px;
+    background: #F2F2F2;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .main .content .job-cards .card .card-header .job-info h5 {
+    font-weight: 500;
+}
+
+.container .main .content .job-cards .card .card-header .job-info h5 span {
+    font-size: 12px;
+    color: #a4a8ac;
+}
+
+.container .main .content .job-cards .card .card-header .job-info a {
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.container .main .content .job-cards .card .card-header .job-info p {
+    font-size: 12px;
+}
+
+.container .main .content .job-cards .card .card-tags {
+    margin: 12px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.container .main .content .job-cards .card .card-tags a {
+    font-size: 13px;
+    background: #F2F2F2;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.container .main .content .job-cards .card .card-desc {
+    font-size: 13px;
+    color: #a4a8ac;
+    line-height: 18px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: calc(20px * 3);
+}
+
+#welcome {
+    font-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+}
+
+#btn-modal {
+    display: none;
+}
+
+/* Aquí empieza el modal css */
+.container-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(144, 148, 150, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+
+#btn-modal:checked~.container-modal {
+    display: flex;
+}
+
+.content-modal {
+    width: 100%;
+    max-width: 900px;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+#modalboxes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-modal .btn-cerrar {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.content-modal .btn-cerrar label {
+    padding: 7px 10px;
+    background-color: #444647;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.content-modal .btn-cerrar label:hover {
+    background-color: #1b1b1c;
+}
+
+.cerrar-modal {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* Aquí termina el modal css */
+@media screen and (max-width:800px) {
+    .content-modal {
+        width: 90%;
+    }
+}
+
+#info {
+    width: 45%;
+}
+
+#trabajo {
+    border: 2px black solid;
+    border-radius: 5px;
+    width: 50%;
+    padding: 15px;
+}
+#name{
+  margin-bottom: 5px;
+}
+#name h3{
+  margin-top: 5px;
+  margin-bottom: 4px;
+}
+.card2 {
+    height: 100px;
+    perspective: 1000px;
+}
+
+.card-inner2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+}
+
+.card2:hover .card-inner2 {
+    transform: rotateY(180deg);
+}
+
+.card-front2,
+.card-back2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front2 {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    border: 3px solid #343435;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+}
+
+.card-back2 {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    border: 3px solid rgb(79, 135, 68);
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(180deg);
+}
+
+/* From Uiverse.io by JkHuger */ 
+#checklist {
+    --background: #fff;
+    --text: #414856;
+    --check: #000000;
+    --disabled: #c3c8de;
+    --width: 100%;
+    --height: 180px;
+    --border-radius: 10px;
+    margin-top: 20px;
+    background: var(--background);
+    width: var(--width);
+    height: var(--height);
+    border: 3px solid black;
+    border-radius: var(--border-radius);
+    position: relative;
+    box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: 30px auto;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  #checklist label {
+    color: var(--text);
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+    width: fit-content;
+    transition: color 0.3s ease;
+    margin-right: 20px;
+  }
+  
+  #checklist label::before, #checklist label::after {
+    content: "";
+    position: absolute;
+  }
+  
+  #checklist label::before {
+    height: 2px;
+    width: 8px;
+    left: -27px;
+    background: var(--check);
+    border-radius: 2px;
+    transition: background 0.3s ease;
+  }
+  
+  #checklist label:after {
+    height: 4px;
+    width: 4px;
+    top: 8px;
+    left: -25px;
+    border-radius: 50%;
+  }
+  
+  #checklist input[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    outline: none;
+    border: 0;
+    margin: 0 15px 0 0;
+    cursor: pointer;
+    background: var(--background);
+    display: grid;
+    align-items: center;
+    margin-right: 20px;
+  }
+  
+  #checklist input[type="checkbox"]::before, #checklist input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    top: auto;
+    background: var(--check);
+    border-radius: 2px;
+  }
+  
+  #checklist input[type="checkbox"]::before {
+    width: 0px;
+    right: 60%;
+    transform-origin: right bottom;
+  }
+  
+  #checklist input[type="checkbox"]::after {
+    width: 0px;
+    left: 40%;
+    transform-origin: left bottom;
+  }
+  
+  #checklist input[type="checkbox"]:checked::before {
+    animation: check-01 0.4s ease forwards;
+  }
+  
+  #checklist input[type="checkbox"]:checked::after {
+    animation: check-02 0.4s ease forwards;
+  }
+  
+  #checklist input[type="checkbox"]:checked + label {
+    color: var(--disabled);
+    animation: move 0.3s ease 0.1s forwards;
+  }
+  
+  #checklist input[type="checkbox"]:checked + label::before {
+    background: var(--disabled);
+    animation: slice 0.4s ease forwards;
+  }
+  
+  #checklist input[type="checkbox"]:checked + label::after {
+    animation: firework 0.5s ease forwards 0.1s;
+  }
+  
+  @keyframes move {
+    50% {
+      padding-left: 8px;
+      padding-right: 0px;
+    }
+  
+    100% {
+      padding-right: 4px;
+    }
+  }
+  
+  @keyframes slice {
+    60% {
+      width: 100%;
+      left: 4px;
+    }
+  
+    100% {
+      width: 100%;
+      left: -2px;
+      padding-left: 0;
+    }
+  }
+  
+  @keyframes check-01 {
+    0% {
+      width: 4px;
+      top: auto;
+      transform: rotate(0);
+    }
+  
+    50% {
+      width: 0px;
+      top: auto;
+      transform: rotate(0);
+    }
+  
+    51% {
+      width: 0px;
+      top: 8px;
+      transform: rotate(45deg);
+    }
+  
+    100% {
+      width: 5px;
+      top: 8px;
+      transform: rotate(45deg);
+    }
+  }
+  
+  @keyframes check-02 {
+    0% {
+      width: 4px;
+      top: auto;
+      transform: rotate(0);
+    }
+  
+    50% {
+      width: 0px;
+      top: auto;
+      transform: rotate(0);
+    }
+  
+    51% {
+      width: 0px;
+      top: 8px;
+      transform: rotate(-45deg);
+    }
+  
+    100% {
+      width: 10px;
+      top: 8px;
+      transform: rotate(-45deg);
+    }
+  }
+  
+  @keyframes firework {
+    0% {
+      opacity: 1;
+      box-shadow: 0 0 0 -2px #000000, 0 0 0 -2px #000000, 0 0 0 -2px #000000, 0 0 0 -2px #000000, 0 0 0 -2px #000000, 0 0 0 -2px #000000;
+    }
+  
+    30% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+      box-shadow: 0 -15px 0 0px #000000, 14px -8px 0 0px #000000, 14px 8px 0 0px #000000, 0 15px 0 0px #000000, -14px 8px 0 0px #000000, -14px -8px 0 0px #000000;
+    }
+  }
+  .animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: rgb(32, 34, 28);
+    box-shadow: 0 0 0 2px rgb(15, 15, 14);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: rgb(18, 19, 17);
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: rgb(25, 27, 22);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #ffffff;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+  }
+  
+  .animated-button:hover svg {
+    fill: #ffffff;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px rgb(21, 20, 23);
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+  }
+  
+  footer{
+    display: flex;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 2px black solid;
+    padding: 10px;
+    justify-content: space-between;
+  }
+
+  #postular{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding-right: 66px;
+  }
+  #foto{
+    display: flex;
+  }
+  #modalboxes p{
+    text-align: justify;
+  }
+  #perfil{
+    padding: 10px;
+    text-align: justify;
+    
+  }
+  #perfil p{
+    padding-right: 80px;
+  }
+
+  .popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+    z-index: 1000;
+  }
+  
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid white;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

@@ -1,0 +1,100 @@
+<div class="container-login">
+  <div id="container-left">
+    <div id="container-text">
+      <h1 style="line-height: 1.3;">¡Ofrece tus servicios, mejora tu economía!</h1>
+      <p style="line-height: 2;">Bienvenido a la plataforma nº 1 en Latinoamérica para personas que buscan oportunidades
+        de pequeños trabajos para complementar sus ingresos.</p>
+      <p style="line-height: 2;">Encuentra trabajos en múltiples categorías: limpieza, reparaciones, tutorías,
+        transporte, tecnología... ¡y mucho más!</p>
+
+      <ul style="line-height: 2;">
+        <li><span class="highlight">📅</span> Gestiona tu tiempo de manera flexible</li>
+        <li><span class="highlight">🛠</span> Ofrece tus habilidades en trabajos online o presenciales</li>
+        <li><span class="highlight">💼</span> Encuentra oportunidades adaptadas a tu perfil</li>
+      </ul>
+
+      <p style="line-height: 2;">Únete a nuestra comunidad y empieza a generar ingresos adicionales <span
+          class="highlight">💪</span></p>
+
+
+    </div>
+  </div>
+
+  <div id="container-right">
+    <div class="surface-card p-4 shadow-2 border-round">
+      <div class="text-center mb-5">
+        <p-image
+          src="https://firebasestorage.googleapis.com/v0/b/project-logos-e0075.appspot.com/o/logo2.svg?alt=media&token=f2bf3b48-baa7-4461-a544-d9307db860d8"
+          alt="Image" width="250" (click)="gotoLanding()" />
+        <h1 style="font-size: 25px;">¡Trabaja con nosotros!</h1>
+      </div>
+
+      <div>
+        <form [formGroup]="signUpForm" (ngSubmit)="submit()">
+          <div>
+            <label for="email" class="block text-900 font-medium mb-2">Correo electrónico</label>
+            <input id="email" type="text" placeholder="ejemplo@correo.com" pInputText class="w-full"
+              formControlName="email">
+            <div *ngIf="signUpForm.get('email')?.invalid && signUpForm.get('email')?.touched">
+              <small class="p-error" *ngIf="signUpForm.get('email')?.errors?.['required']">El correo es
+                obligatorio.</small>
+              <small class="p-error" *ngIf="signUpForm.get('email')?.errors?.['email']">Ingresa un correo
+                válido.</small>
+            </div>
+
+            <p-divider />
+
+            <label for="password" class="block text-900 font-medium mb-2">Crear contraseña (Mínimo 6 caracteres)</label>
+            <input id="password" type="password" placeholder="Crea tu contraseña" pInputText class="w-full"
+              formControlName="password">
+            <div *ngIf="signUpForm.get('password')?.invalid && signUpForm.get('password')?.touched">
+              <small class="p-error" *ngIf="signUpForm.get('password')?.errors?.['required']">La contraseña es
+                obligatoria.</small>
+              <small class="p-error" *ngIf="signUpForm.get('password')?.errors?.['minlength']">
+                La contraseña debe tener al menos 6 caracteres.
+              </small>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <p-divider />
+
+      <div *ngIf="errorMessage" class="p-error mt-3 mb-3">
+        {{ errorMessage }}
+      </div>
+
+      <div class="flex align-items-center justify-content-between mb-6">
+        <div class="flex align-items-center"></div>
+
+        <button pButton pRipple label="Crear Cuenta" icon="pi pi-user" class="w-full custom-button" type="submit"
+          (click)="submit()"></button>
+      </div>
+
+      <div class="text-center mt-5">
+        <span class="text-600 font-medium line-height-3">¿Tienes una cuenta?</span>
+        <a href="trabajador/login" class="font-medium no-underline ml-2 text-blue-500 cursor-pointer">Iniciar Sesión</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Popup de carga -->
+<div *ngIf="isLoading" class="popup">
+  <div class="loading-container">
+    <div class="spinner"></div>
+    <p>Creando tu cuenta...</p>
+  </div>
+
+</div>
+
+
+<!-- Popup de éxito -->
+<p-dialog header="¡Completa tu perfil!" [(visible)]="displaySuccessDialog" [modal]="true" [closable]="false">
+  <p>La cuenta fue creada con éxito.
+    Completa tu perfil para maximizar tus oportunidades y conectar con otros. ¡Empieza ahora!.</p>
+  <p-footer>
+    <button pButton pRipple label="Completar Perfil" icon="pi pi-arrow-right" iconPos="right"
+      class="w-full custom-button" (click)="navigateToProfile()"></button>
+  </p-footer>
+</p-dialog>
