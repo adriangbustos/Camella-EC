@@ -1,8 +1,10 @@
 # Camella-EC
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-44CC11?style=for-the-badge)](LICENSE)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Access_Platform-blue?style=for-the-badge&logo=netlify)](#)
 
 A web platform connecting Ecuadorian artisans, trade workers, and service specialists with local clients. Built with Angular 17, TypeScript, SCSS, and Firebase.
+
+![Camella-EC Preview](src/assets/preview.png)
 
 <div align="center">
   <img src="https://img.shields.io/badge/Angular_17-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular" />
@@ -44,6 +46,8 @@ CAMELLAEC/
 │   │   ├── services/            # Backend and data services
 │   │   ├── app.routes.ts        # Modular client/worker route definitions
 │   │   └── app.config.ts        # Application bootstrap configuration
+│   ├── assets/                  # Logos and UI assets
+│   │   └── preview.png          # Landing page screenshot preview
 │   └── environments/            # Firebase and backend environment configurations
 └── angular.json                 # Angular build pipeline configuration
 ```
