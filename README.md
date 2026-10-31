@@ -1,7 +1,5 @@
 # Camella-EC
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Access_Platform-blue?style=for-the-badge&logo=netlify)](#)
-
 A web platform connecting Ecuadorian artisans, trade workers, and service specialists with local clients. Built with Angular 17, TypeScript, SCSS, and Firebase.
 
 ![Camella-EC Preview](src/assets/preview.png)
